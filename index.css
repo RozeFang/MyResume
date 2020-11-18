@@ -1,0 +1,207 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 16px;
+}
+
+body {
+	margin: 0;
+	--color-text: #1c1b1b;
+	--color-bg: #efe6e1;
+	--color-link: #b07656;
+	--color-link-hover: #000;
+	--color-deco: #e4dbd6;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	font-family: paralucent, sans-serif;
+	font-family: quiroh, sans-serif;
+	font-family: mr-eaves-xl-sans, sans-serif;
+}
+a {
+	color:var(--color-link);
+	text-decoration: none;
+	outline: none;
+}
+a:hover {
+	color: var(--color-link-hover);
+}
+p {
+	line-height:2;
+}
+
+/* Page Loader */
+.js .loading::before {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color-bg);
+}
+
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	pointer-events: none;
+	border-radius: 50%;
+	opacity: 0.4;
+	background: var(--color-link);
+	animation: loaderAnim 0.7s linear infinite alternate forwards;
+}
+
+@keyframes loaderAnim {
+	to {
+		opacity: 1;
+		transform: scale3d(0.5,0.5,1);
+	}
+}
+
+
+
+
+
+
+.content {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+	padding: 12rem 0;
+	counter-reset: figure;
+}
+
+.item {
+	margin: 10vh auto;
+	max-width: 100%;
+	position: relative;
+	will-change: transform;
+}
+
+.item::before {
+	counter-increment: figure;
+	content: counter(figure, decimal-leading-zero);
+	position: absolute;
+	right: 20%;
+	left: 80%;
+	font-family: paralucent, sans-serif;
+	font-size: 10rem;
+	color: var(--color-deco);
+	bottom: calc(100% - 3rem);
+}
+
+.item:nth-child(even)::before {
+	right: 0;
+}
+
+.item__img-wrap {
+	--aspect-ratio: 1/1.5;
+	overflow: hidden;
+	width: 500px;
+	margin: 0 auto;
+	padding-bottom: calc(100% / (var(--aspect-ratio)));
+	max-width: calc(100% - 2rem);
+	will-change: transform;
+}
+
+.item:first-child .item__img-wrap {
+	width: 1200px;
+	--aspect-ratio: 1000/200;
+	--image: url(/E:/coding/Myresume/img_index/2020-11-04_201621.jpg);
+}
+
+.item:nth-child(2) .item__img-wrap {
+	width: 1200px;
+	--aspect-ratio: 1000/200;
+	--image: url(/E:/coding/Myresume/img_index/2020-11-04_203547.jpg);
+}
+
+.item:nth-child(3) .item__img-wrap {
+	width: 1200px;
+	--aspect-ratio: 1000/200;
+	--image: url(/E:/coding/Myresume/img_index/2020-11-14_172259.jpg);
+}
+
+.item:nth-child(4) .item__img-wrap {
+	width: 1200px;
+	--aspect-ratio: 1000/200;
+	--image: url(/E:/coding/Myresume/img_index/2020-11-14_172229.jpg);
+}
+
+.item:nth-child(5) .item__img-wrap {
+	width: 1200px;
+	--aspect-ratio: 1000/200;
+	--image: url(/E:/coding/Myresume/img_index/2020-11-14_173735.jpg);
+}
+
+.item:nth-child(6) .item__img-wrap {
+	width: 1200px;
+	--aspect-ratio: 1000/200;
+	--image: url(/E:/coding/Myresume/img_index/2020-11-14_171633.jpg);
+}
+
+.item:nth-child(7) .item__img-wrap {
+	width: 1200px;
+	--aspect-ratio: 1000/200;
+	--image: url(/E:/coding/Myresume/img_index/2020-11-14_171832.jpg);
+}
+
+.item__img {
+	--overflow: 40px;
+	height: calc(100% + (2 * var(--overflow)));
+	top: calc( -1 * var(--overflow));
+	width: 100%;
+	position: absolute;
+	background-image: var(--image);
+	background-size: cover;
+	background-position: 50% 0%;
+	will-change: transform;
+}
+
+.item__img--t1 {
+	--overflow: 60px;
+}
+
+.item__img--t2 {
+	--overflow: 80px;
+}
+
+.item__img--t3 {
+	--overflow: 120px;
+}
+
+.item__caption {
+	padding: 2rem 1rem;
+}
+
+.item__caption-title {
+	font-family: paralucent, sans-serif;
+	font-weight: 400;
+	font-size: 3rem;
+	margin: 0;
+}
+
+.item__caption-copy {
+	margin: 0;
+}
+
+.item__caption-copy::before {
+	content: '__';
+	line-height: 1;
+	color: var(--color-link);
+	font-weight: 700;
+	font-size: 3rem;
+	margin: 0 0 1rem;
+	display: block;
+}
