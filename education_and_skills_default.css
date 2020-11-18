@@ -1,0 +1,32 @@
+body, html { font-size: 100%; 	padding: 0; margin: 0;}
+
+/* Reset */
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	background: #efe6e1;
+	color: #1c1b1b;
+	font-family: paralucent, sans-serif;
+	font-family: quiroh, sans-serif;
+	font-family: mr-eaves-xl-sans, sans-serif;
+}
+a{
+	line-height: 1.3;
+	text-decoration: none;
+	outline: none;
+}
+h2 {
+	font-weight: 400;
+	font-size: 1.5rem;
+	font-family: paralucent, sans-serif;
+}
+p {
+	font-size: 1rem;
+	color: #1c1b1b;
+}

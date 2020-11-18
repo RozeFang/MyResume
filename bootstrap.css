@@ -1,0 +1,42 @@
+
+.demo{
+	padding: 2em 0;
+}
+.progress-title{
+		font-size: 1rem;
+		color: #000;
+		margin: 0 0 20px;
+		font-family: paralucent, sans-serif;
+}
+.progress{
+		height: 3px;
+		border-radius: 0;
+		margin-bottom: 30px;
+		overflow: visible;
+		box-shadow: none;
+		position: relative;
+}
+.progress .progress-bar{
+		height:8px;
+		position: relative;
+		top: -3px;
+		box-shadow: none;
+}
+.progress .progress-value{
+		display: block;
+		font-size: 1rem;
+		color: #000;
+		position: absolute;
+		top: -30px;
+		right: 5px;
+		font-family: paralucent, sans-serif;
+}
+.progress.pink{
+		background: #fff;
+}
+.progress.green{
+		background: #fff;
+}
+.progress.yellow{
+		background: #fff;
+}
